@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script src="stuff.js"></script>
+		<script>
+		 
+		function addDetails() {
+			
+			var name = document.f.uname.value;
+			var phone = document.f.phone.value;
+		    dp[0] =name;
+		    dp[1] =phone;
+		    alert(dp[0]);
+
+		}
+		function getDetails() {
+
+			var name = document.f.uname.value;
+			var phone = document.f.phone.value;
+			document.getElementById("p1").innerHTML = name;
+			document.getElementById("p2").innerHTML = phone;
+			
+		}
+		</script>
+	</head>
+	<body><center>
+	<p style="background-color:black;color:white;font-size:20">ADD SUBSCRIBER</p></center>
+	<div>
+	 <a href="new.html">Back</></a><br>
+	 <form name="f">
+	 Name:<br><input type="text" name="uname" onKeyPress="getDetails()"/><br>
+	 Phone:<br><input type="text" name="phone" onKeyPress="getDetails()"/><br>
+	      <p>Subscriber to be added:</p><br>
+		    Name:<p id="p1"></p><br>
+		    Phone:<p id="p2"></p><br>
+		<input type="button" value="ADD" onclick="addDetails()" style="background-color:green"/>
+	</form> 
+	</div>
+
+	</body>
+</html>
